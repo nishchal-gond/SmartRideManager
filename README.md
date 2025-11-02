@@ -1,6 +1,6 @@
 ﻿# 🏍️ SmartRide Manager
 
-![SmartRide Manager Banner](./assets/image.png)
+![SmartRide Manager Banner](https://github.com/Rio2802/SmartRideManager/blob/main/converted-assasins_creed_force_by_imbattuto8_dj9pgsl.png)
 
 **SmartRide Manager** is a cross-platform React Native + Expo mobile app that helps bike owners track and manage everything about their rides — from maintenance and services to fuel expenses, mileage, and ride records — all in one place.
 
