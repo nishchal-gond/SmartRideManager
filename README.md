@@ -62,7 +62,7 @@ npx expo start
 
 (Optional) Copy .env.example → .env and fill in your Firebase environment variables.
 
-![Project Structure]([C:/Users/USER/Desktop/SmartRideManager/image.png](https://github.com/Rio2802/SmartRideManager/blob/main/image.png)
+![Project Structure](https://github.com/Rio2802/SmartRideManager/blob/main/image.png)
 
 Roadmap / Future Enhancements
 
