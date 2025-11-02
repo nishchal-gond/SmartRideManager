@@ -98,9 +98,8 @@ git push origin feature-name
 
 Nishchal Gond
 📍 Bengaluru, India
-🔗 GitHub
- • LinkedIn
+🔗  [LinkedIn](https://www.linkedin.com/in/nishchal-g-741a64107/) • [GitHub](https://github.com/Rio2802)
 
 🛡️ License
 
-This project is licensed under the ![MIT License](https://opensource.org/license/MIT).
+This project is licensed under the [MIT License](https://opensource.org/license/MIT).
