@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  
+  <!-- PWA Meta Tags -->
+  <meta name="application-name" content="SmartRide Manager">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SmartRide">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#4285F4">
+  
+  <!-- Description for SEO and App Stores -->
+  <meta name="description" content="Track and manage everything about your bike rides - from maintenance and services to fuel expenses, mileage, and ride records.">
+  <meta name="keywords" content="bike, motorcycle, fuel tracker, mileage, service, maintenance, ride tracker">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="SmartRide Manager">
+  <meta property="og:description" content="Track and manage everything about your bike rides">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/icons/icon-512x512.png">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SmartRide Manager">
+  <meta name="twitter:description" content="Track and manage everything about your bike rides">
+  <meta name="twitter:image" content="/icons/icon-512x512.png">
+  
+  <!-- Title -->
+  <title>SmartRide Manager</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/icons/icon-192x192.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Splash Screens for iOS -->
+  <link rel="apple-touch-startup-image" href="/splash.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+    }
+    
+    #root {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+    
+    /* Loading Screen */
+    .app-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #4285F4;
+      color: white;
+    }
+    
+    .app-loading-logo {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    
+    .app-loading-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .app-loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-top: 5px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- App Root -->
+  <div id="root">
+    <div class="app-loading">
+      <div class="app-loading-logo">🏍️</div>
+      <div class="app-loading-text">SmartRide Manager</div>
+      <div class="app-loading-spinner"></div>
+    </div>
+  </div>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registered:', registration);
+          })
+          .catch(error => {
+            console.log('ServiceWorker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -44,7 +44,31 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static",
+      "build": {
+        "babel": {
+          "include": [
+            "victory-native"
+          ]
+        }
+      },
+      "config": {
+        "firebase": {
+          "measurementId": "YOUR_MEASUREMENT_ID"
+        }
+      },
+      "backgroundColor": "#ffffff",
+      "themeColor": "#4285F4",
+      "name": "SmartRide Manager",
+      "shortName": "SmartRide",
+      "description": "Track and manage everything about your bike rides - from maintenance and services to fuel expenses, mileage, and ride records.",
+      "lang": "en",
+      "scope": "/",
+      "startUrl": "/",
+      "display": "standalone",
+      "orientation": "portrait"
     },
     "plugins": [
       [

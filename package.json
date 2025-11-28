@@ -7,6 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "build:web": "expo export:web",
+    "serve": "npx serve dist -p 3000",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ."
