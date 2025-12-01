@@ -1,0 +1,28 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "groupLocations": {
+      "$groupId": {
+        "$userId": {
+          ".write": "auth != null && auth.uid == $userId",
+          ".read": "auth != null && root.child('groupMembers').child($groupId).child(auth.uid).exists()"
+        }
+      }
+    },
+    "groupMembers": {
+      "$groupId": {
+        "$uid": {
+          ".read": "auth != null && auth.uid == $uid",
+          ".write": "auth != null && auth.uid == $uid"
+        }
+      }
+    },
+    "musicSession": {
+      "$sessionId": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+}

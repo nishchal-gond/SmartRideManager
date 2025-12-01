@@ -1,0 +1,20 @@
+{
+  "users": [
+    {"uid": "u1", "name": "Alex", "photo": null, "emergencyContact": "+1234567890"},
+    {"uid": "u2", "name": "Sam", "photo": null, "emergencyContact": "+1098765432"},
+    {"uid": "u3", "name": "Riley", "photo": null, "emergencyContact": "+1987654321"}
+  ],
+  "bikes": [
+    {"bikeId": "b1", "userId": "u1", "model": "Yamaha MT-15", "regNo": "KA01AB1234", "year": 2023, "odometer": 12345.6, "insuranceExpiry": "2026-01-01T00:00:00Z", "pucExpiry": "2025-06-01T00:00:00Z", "brakeServiceKm": 3000},
+    {"bikeId": "b2", "userId": "u2", "model": "KTM Duke 390", "regNo": "MH12XY9876", "year": 2022, "odometer": 23000.0, "insuranceExpiry": "2025-12-01T00:00:00Z", "pucExpiry": "2025-05-01T00:00:00Z", "brakeServiceKm": 4000}
+  ],
+  "groups": [
+    {"groupId": "g1", "leaderId": "u1", "name": "Sunday Ride", "active": true}
+  ],
+  "groupMembers": {
+    "g1": {"u1": true, "u2": true, "u3": true}
+  },
+  "musicSession": [
+    {"sessionId": "s1", "groupId": "g1", "trackId": "demo-track", "positionMs": 0, "playing": false, "leaderId": "u1"}
+  ]
+}
