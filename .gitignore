@@ -7,10 +7,40 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+.pnp
+.pnp.js
+
+# Build outputs
 dist
 dist-ssr
+build
 *.local
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Flutter
+mobile/flutter_app/.dart_tool/
+mobile/flutter_app/.flutter-plugins
+mobile/flutter_app/.flutter-plugins-dependencies
+mobile/flutter_app/.packages
+mobile/flutter_app/.pub-cache/
+mobile/flutter_app/.pub/
+mobile/flutter_app/build/
+mobile/flutter_app/.ios/
+mobile/flutter_app/.android/
 
 # Editor directories and files
 .vscode/*
@@ -22,4 +52,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-node_modules
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.pem
+.cache/
